@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dvaqhwst6kciy"]
+
+[ext_resource type="Script" uid="uid://dsne8kq0ag7h2" path="res://scenes/1/pepita.gd" id="1_bqlkd"]
+[ext_resource type="Texture2D" uid="uid://diog6vbyb6jry" path="res://assets/pepita/New Piskel.png" id="2_kam7b"]
+[ext_resource type="Texture2D" uid="uid://u2nln48oh50u" path="res://assets/pepita/New Piskel(1).png" id="3_j1yty"]
+[ext_resource type="Texture2D" uid="uid://dgcob5lhriwm6" path="res://assets/pepita/New Piskel(3).png" id="5_0eb2v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1yty"]
+atlas = ExtResource("2_kam7b")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5w3n"]
+atlas = ExtResource("2_kam7b")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0eb2v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1yty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5w3n")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Intro" type="Node2D" unique_id=1031709008]
+texture_filter = 1
+position = Vector2(63, 2)
+
+[node name="Pepita" type="Node2D" parent="." unique_id=1389501691]
+script = ExtResource("1_bqlkd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pepita" unique_id=1269296103]
+texture_filter = 1
+position = Vector2(119, 76.00001)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_0eb2v")
+autoplay = "default"
+
+[node name="Sprite2D" type="Sprite2D" parent="Pepita" unique_id=2035706049]
+position = Vector2(258, 76.00001)
+scale = Vector2(5, 5)
+texture = ExtResource("3_j1yty")
+
+[node name="NewPiskel(3)" type="Sprite2D" parent="Pepita" unique_id=1773357309]
+position = Vector2(433.00003, 88)
+scale = Vector2(5, 5)
+texture = ExtResource("5_0eb2v")

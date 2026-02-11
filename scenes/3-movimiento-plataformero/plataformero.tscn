@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://vg35sxkhqo1p"]
+
+[ext_resource type="Script" uid="uid://de3ybi6j5wup8" path="res://scenes/3-movimiento-plataformero/pepita.gd" id="1_15tdx"]
+[ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="1_m8jkk"]
+[ext_resource type="Texture2D" uid="uid://u2nln48oh50u" path="res://assets/pepita/pepita-enyesada.png" id="1_tm6gd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mewx"]
+size = Vector2(55, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ouq8i"]
+size = Vector2(1154, 127)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8jkk"]
+size = Vector2(122.5, 114.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f28lg"]
+size = Vector2(131, 119)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tm6gd"]
+size = Vector2(119.5, 111.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15tdx"]
+size = Vector2(121.5, 117.5)
+
+[node name="Plataformero" type="Node2D" unique_id=162770502]
+
+[node name="Pepita" type="CharacterBody2D" parent="." unique_id=1436622432]
+texture_filter = 1
+position = Vector2(331, 445)
+script = ExtResource("1_15tdx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pepita" unique_id=5877517]
+scale = Vector2(3, 3)
+texture = ExtResource("1_tm6gd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pepita" unique_id=87237233]
+position = Vector2(2.5, 10)
+shape = SubResource("RectangleShape2D_8mewx")
+
+[node name="Obstaculos" type="Node2D" parent="." unique_id=1916232663]
+
+[node name="Piso" type="StaticBody2D" parent="Obstaculos" unique_id=655160632]
+position = Vector2(0, 512)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/Piso" unique_id=1236600173]
+position = Vector2(575, 64.5)
+shape = SubResource("RectangleShape2D_ouq8i")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/Piso" unique_id=1828537091]
+texture_repeat = 2
+texture = ExtResource("1_m8jkk")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1152, 128)
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Obstaculos" unique_id=1714761944]
+position = Vector2(704, 384)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/StaticBody2D5" unique_id=2119868631]
+position = Vector2(63.25, 61.25)
+shape = SubResource("RectangleShape2D_m8jkk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/StaticBody2D5" unique_id=2132495429]
+texture_repeat = 2
+texture = ExtResource("1_m8jkk")
+centered = false
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Obstaculos" unique_id=969248277]
+position = Vector2(864, 384)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/StaticBody2D6" unique_id=747038315]
+position = Vector2(62.5, 68.5)
+shape = SubResource("RectangleShape2D_f28lg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/StaticBody2D6" unique_id=142115378]
+texture_repeat = 2
+texture = ExtResource("1_m8jkk")
+centered = false
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Obstaculos" unique_id=319801753]
+position = Vector2(1058, 301)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/StaticBody2D7" unique_id=1933500547]
+position = Vector2(64.75, 62.75)
+shape = SubResource("RectangleShape2D_tm6gd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/StaticBody2D7" unique_id=557254611]
+texture_repeat = 2
+texture = ExtResource("1_m8jkk")
+centered = false
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Obstaculos" unique_id=2043610247]
+position = Vector2(1255, 209)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/StaticBody2D8" unique_id=812724753]
+position = Vector2(63.75, 59.75)
+shape = SubResource("RectangleShape2D_15tdx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/StaticBody2D8" unique_id=928143735]
+texture_repeat = 2
+texture = ExtResource("1_m8jkk")
+centered = false
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Obstaculos" unique_id=1668792102]
+position = Vector2(802, 101)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/StaticBody2D9" unique_id=484329204]
+position = Vector2(63.75, 59.75)
+shape = SubResource("RectangleShape2D_15tdx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/StaticBody2D9" unique_id=111197219]
+texture_repeat = 2
+texture = ExtResource("1_m8jkk")
+centered = false
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Obstaculos" unique_id=615875099]
+position = Vector2(1075, -92)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/StaticBody2D10" unique_id=18712363]
+position = Vector2(63.75, 59.75)
+shape = SubResource("RectangleShape2D_15tdx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/StaticBody2D10" unique_id=1797118211]
+texture_repeat = 2
+texture = ExtResource("1_m8jkk")
+centered = false
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Obstaculos" unique_id=1275198082]
+position = Vector2(661, -225)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/StaticBody2D11" unique_id=1133339670]
+position = Vector2(63.75, 59.75)
+shape = SubResource("RectangleShape2D_15tdx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/StaticBody2D11" unique_id=760791747]
+texture_repeat = 2
+texture = ExtResource("1_m8jkk")
+centered = false

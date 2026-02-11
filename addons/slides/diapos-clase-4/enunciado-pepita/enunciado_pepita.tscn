@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://cyp18ha2k7sf3"]
+
+[ext_resource type="Script" uid="uid://bkyf0u16l1hrr" path="res://addons/slides/diapos-clase-4/enunciado-pepita/enunciado_pepita.gd" id="1_heh4e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ob3q6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_heh4e"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="EnunciadoPepita" type="MarginContainer" unique_id=232169102]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_heh4e")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=249302561]
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=822039349]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=55568256]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ob3q6")
+bbcode_enabled = true
+text = "[font_size=30]Pepita la Golondrina
+
+[font_size=25]Sabemos que Pepita tiene una cantidad de [b]energía[/b] que empieza en [color=green]100[/color]
+
+También sabemos que puede volar hacia:
+[color=light_blue]arriba, abajo, izquierda y derecha[/color]
+
+Cada vez que vuela en una dirección,
+recorre [b]100[/b] metros en esa dirección y
+gasta [b]10[/b] de energía.
+[/font_size][/font_size]"
+fit_content = true
+scroll_active = false
+selection_enabled = true
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=664964723]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "Pregunta 1"
+
+[node name="Label2" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=1074472771]
+visible = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 2
+focus_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_heh4e")
+bbcode_enabled = true
+text = "[font_size=20]Luego de volar una vez hacia [color=light_blue]arriba[/color],
+- ¿cuánta [b]energía[/b] le queda?
+- ¿en que [b]ubicación[/b] se encuentra?[/font_size]"
+fit_content = true
+context_menu_enabled = true
+selection_enabled = true
+
+[node name="Button2" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1668007253]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "Pregunta 2"
+
+[node name="Label3" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=845719138]
+visible = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 2
+focus_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_heh4e")
+bbcode_enabled = true
+text = "[font_size=20]Con cuánta [b]energía[/b] y en que [b]ubicación[/b] va a quedar si hace el siguiente recorrido:
+- [color=light_blue]arriba[/color]
+- [color=light_blue]abajo[/color]
+- [color=light_blue]derecha[/color]
+- [color=light_blue]derecha[/color][/font_size]"
+fit_content = true
+context_menu_enabled = true
+selection_enabled = true
+
+[node name="Button3" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=674459210]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "Pregunta 3"
+
+[node name="Label4" type="RichTextLabel" parent="ScrollContainer/VBoxContainer" unique_id=716444154]
+visible = false
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 2
+focus_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_heh4e")
+bbcode_enabled = true
+text = "[font_size=20]Algo que no estabamos teniendo en cuenta, es que si su [b]energía[/b] llega a 0, ya está cansada por lo que no debería poder volver a moverse.
+
+Entonces, con qué [b]energía[/b] y en que [b]posición[/b] debería quedar si se mueve:
+- 6 veces para [color=light_blue]arriba[/color]
+- 5 veces para la [color=light_blue]derecha[/color]
+- 2 veces para [color=light_blue]abajo[/color][/font_size]"
+fit_content = true
+context_menu_enabled = true
+selection_enabled = true

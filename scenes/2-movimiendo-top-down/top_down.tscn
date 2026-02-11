@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://bbehurxefee1v"]
+
+[ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="1_gy4nq"]
+[ext_resource type="Script" uid="uid://b6neks7ow1q3u" path="res://scenes/2-movimiendo-top-down/pepita.gd" id="1_jcpax"]
+[ext_resource type="Texture2D" uid="uid://dgcob5lhriwm6" path="res://assets/pepita/pepita-volando.png" id="2_40rsq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jcpax"]
+radius = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gy4nq"]
+size = Vector2(1162, 138)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40rsq"]
+size = Vector2(138, 394)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7otn2"]
+size = Vector2(128, 394)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcpax"]
+size = Vector2(1162, 138)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3l3l"]
+size = Vector2(138, 138)
+
+[node name="TopDown" type="Node2D" unique_id=1252811842]
+
+[node name="Pepita" type="CharacterBody2D" parent="." unique_id=594148315]
+texture_filter = 1
+position = Vector2(320, 320)
+script = ExtResource("1_jcpax")
+rapidez = 100
+
+[node name="Sprite2D" type="Sprite2D" parent="Pepita" unique_id=2095423312]
+scale = Vector2(3, 3)
+texture = ExtResource("2_40rsq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pepita" unique_id=1307501022]
+shape = SubResource("CircleShape2D_jcpax")
+
+[node name="Obstaculos" type="Node2D" parent="." unique_id=1011958678]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstaculos" unique_id=43116293]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/StaticBody2D" unique_id=1896658903]
+position = Vector2(571, 59)
+shape = SubResource("RectangleShape2D_gy4nq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/StaticBody2D" unique_id=1429883660]
+texture_repeat = 2
+texture = ExtResource("1_gy4nq")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1152, 128)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Obstaculos" unique_id=655753978]
+position = Vector2(0, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/StaticBody2D2" unique_id=51671959]
+position = Vector2(59, 187)
+shape = SubResource("RectangleShape2D_40rsq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/StaticBody2D2" unique_id=1799189549]
+texture_repeat = 2
+texture = ExtResource("1_gy4nq")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 128, 384)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Obstaculos" unique_id=1281531987]
+position = Vector2(1024, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/StaticBody2D4" unique_id=1814435091]
+position = Vector2(64, 187)
+shape = SubResource("RectangleShape2D_7otn2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/StaticBody2D4" unique_id=739831318]
+texture_repeat = 2
+texture = ExtResource("1_gy4nq")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 128, 384)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Obstaculos" unique_id=1301438313]
+position = Vector2(0, 512)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/StaticBody2D3" unique_id=1141788978]
+position = Vector2(571, 59)
+shape = SubResource("RectangleShape2D_jcpax")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/StaticBody2D3" unique_id=2099475048]
+texture_repeat = 2
+texture = ExtResource("1_gy4nq")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1152, 128)
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Obstaculos" unique_id=1257970057]
+position = Vector2(544, 256)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos/StaticBody2D5" unique_id=369506861]
+position = Vector2(59, 59)
+shape = SubResource("RectangleShape2D_v3l3l")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstaculos/StaticBody2D5" unique_id=1560640992]
+texture_repeat = 2
+texture = ExtResource("1_gy4nq")
+centered = false

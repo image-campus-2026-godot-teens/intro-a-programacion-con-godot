@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="SlidesConfig" format=3 uid="uid://dffobwkaopwbx"]
+
+[ext_resource type="Script" uid="uid://4hfpqwb4kw6j" path="res://addons/slides/slides_config.gd" id="1_uq0ys"]
+
+[resource]
+script = ExtResource("1_uq0ys")
+presentation_scene = "uid://f8tclr4vo25a"
+avanzar_key = 4194444
+avanzar_use_ctrl = true
+avanzar_use_alt = false
+avanzar_joypad_button = 1
+retroceder_key = 4194442
+retroceder_use_ctrl = true
+retroceder_use_alt = false
+retroceder_joypad_button = 1
+toggle_diapositivas_key = 4194443
+toggle_diapositivas_use_ctrl = true
+toggle_diapositivas_use_alt = false
+toggle_diapositivas_joypad_button = 1
+accion_primaria_key = 4194445
+accion_primaria_use_ctrl = true
+accion_primaria_use_alt = false
+accion_primaria_joypad_button = 1
+accion_secundaria_key = 4194446
+accion_secundaria_use_ctrl = true
+accion_secundaria_use_alt = false
+accion_secundaria_joypad_button = 1
+accion_terciaria_key = 4194447
+accion_terciaria_use_ctrl = true
+accion_terciaria_use_alt = false
+accion_terciaria_joypad_button = 1
+toggle_run_scene_key = 4194439
+toggle_run_scene_use_ctrl = true
+toggle_run_scene_use_alt = false
+toggle_run_scene_joypad_button = 1
+toggle_fullscreen_key = 4194309
+toggle_fullscreen_use_ctrl = false
+toggle_fullscreen_use_alt = true
+toggle_fullscreen_joypad_button = 2

@@ -1,0 +1,892 @@
+[gd_scene format=3 uid="uid://f8tclr4vo25a"]
+
+[ext_resource type="Script" uid="uid://dtoovey3km3b3" path="res://addons/slides/diapositivas.gd" id="1_cq01e"]
+[ext_resource type="Texture2D" uid="uid://c0cqy13eon82f" path="res://addons/slides/diapos-clase-4/imagenes/titulo_image_campus.png" id="2_ol1ep"]
+[ext_resource type="Script" uid="uid://bruuc8tbpysj1" path="res://addons/slides/diapos-clase-4/agenda.gd" id="3_ltgl6"]
+[ext_resource type="Texture2D" uid="uid://cx2t7vwmnqw1j" path="res://addons/slides/diapos-clase-4/imagenes/Cronograma.png" id="4_cp20q"]
+[ext_resource type="Script" uid="uid://c5ppsknfb38pt" path="res://addons/slides/diapos-clase-4/primer_programa_anio.gd" id="4_i4rbl"]
+[ext_resource type="StyleBox" uid="uid://28e3fi5u25a8" path="res://addons/slides/diapos-clase-4/style_box_label.tres" id="5_4heot"]
+[ext_resource type="LabelSettings" uid="uid://c1g318u2vdlvv" path="res://addons/slides/diapos-clase-4/label_settings.tres" id="6_vyuff"]
+[ext_resource type="Texture2D" uid="uid://6dg01i8w4b8w" path="res://addons/slides/diapos-clase-4/imagenes/Ada-Lovelace.png" id="7_0j6un"]
+[ext_resource type="PackedScene" uid="uid://js2fdq12ia8c" path="res://addons/slides/diapos-clase-4/effects/enter_animation.tscn" id="7_vq5sn"]
+[ext_resource type="Script" uid="uid://fmjlcsqs0l1a" path="res://addons/slides/diapos-clase-4/mostrar_enunciado.gd" id="9_ol1ep"]
+[ext_resource type="PackedScene" uid="uid://b1cetgoyyb8ma" path="res://addons/slides/diapos-clase-3/effects/enter_animation.tscn" id="9_pin1d"]
+[ext_resource type="Texture2D" uid="uid://dgcob5lhriwm6" path="res://assets/pepita/pepita-volando.png" id="10_ltgl6"]
+[ext_resource type="Script" uid="uid://dj71a5n7uaat7" path="res://addons/slides/diapos-clase-4/enunciado_pepita_2.gd" id="11_dea2o"]
+[ext_resource type="Texture2D" uid="uid://bynmf0fchnswh" path="res://addons/slides/diapos-clase-4/imagenes/navigation_e.png" id="12_0j6un"]
+[ext_resource type="Texture2D" uid="uid://dmevxqvom6t7q" path="res://addons/slides/diapos-clase-4/imagenes/navigation_n.png" id="13_i4rbl"]
+[ext_resource type="Texture2D" uid="uid://vn8khib2megh" path="res://addons/slides/diapos-clase-4/imagenes/navigation_s.png" id="14_pin1d"]
+[ext_resource type="Texture2D" uid="uid://djlq3818gtijw" path="res://addons/slides/diapos-clase-4/imagenes/navigation_w.png" id="15_cp20q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ys6oj"]
+font_size = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wx88p"]
+content_margin_left = 30.0
+content_margin_top = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 30.0
+bg_color = Color(0, 0, 0, 0.9019608)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i4rbl"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0, 0.44705883, 0.44705883, 1)
+shadow_color = Color(0, 0, 0, 0.84313726)
+shadow_size = 20
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i4rbl"]
+font_size = 30
+font_color = Color(0.93333334, 0.93333334, 0.93333334, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pin1d"]
+font_size = 50
+font_color = Color(0, 0.61960787, 0.62352943, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0.09411765, 0.09411765, 0.09411765, 0.54509807)
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cp20q"]
+font_size = 50
+font_color = Color(0, 0.61960787, 0.62352943, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0.09411765, 0.09411765, 0.09411765, 0.54509807)
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ltgl6"]
+bg_color = Color(0.35006407, 0.3500639, 0.35006392, 0.8235294)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="Gradient" id="Gradient_ltgl6"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 1, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dea2o"]
+gradient = SubResource("Gradient_ltgl6")
+
+[sub_resource type="Animation" id="Animation_dea2o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer/TextureRect/TextureProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4heot"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer/TextureRect/TextureProgressBar:value")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 100.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vyuff"]
+_data = {
+&"RESET": SubResource("Animation_dea2o"),
+&"new_animation": SubResource("Animation_4heot")
+}
+
+[sub_resource type="Animation" id="Animation_0j6un"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer/TextureRect/NavigationE:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer/TextureRect/NavigationN:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer/TextureRect/NavigationW:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelContainer/TextureRect/NavigationS:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_i4rbl"]
+resource_name = "new_animation"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer/TextureRect/NavigationE:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer/TextureRect/NavigationN:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer/TextureRect/NavigationW:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelContainer/TextureRect/NavigationS:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pin1d"]
+_data = {
+&"RESET": SubResource("Animation_0j6un"),
+&"new_animation": SubResource("Animation_i4rbl")
+}
+
+[sub_resource type="Gradient" id="Gradient_0j6un"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.114158, 0.11415812, 0.11415804, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i4rbl"]
+gradient = SubResource("Gradient_0j6un")
+
+[sub_resource type="Animation" id="Animation_pin1d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer/Control/TextureRect/NavigationE:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer/Control/TextureRect/NavigationE:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer/Control/TextureRect:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(225, 125)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelContainer/Control/TextureRect/TextureProgressBar:value")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [100.0]
+}
+
+[sub_resource type="Animation" id="Animation_cp20q"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer/Control/TextureRect/NavigationE:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 1, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer/Control/TextureRect/NavigationE:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer/Control/TextureRect:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.29, 0.6333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(225, 125), Vector2(325, 125)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PanelContainer/Control/TextureRect/TextureProgressBar:value")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3, 0.64),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [100.0, 90.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qpqxj"]
+_data = {
+&"RESET": SubResource("Animation_pin1d"),
+&"new_animation": SubResource("Animation_cp20q")
+}
+
+[node name="Diapositivas" type="Control" unique_id=2089374784]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_cq01e")
+diapositiva_actual = 12
+
+[node name="Titulo" type="Control" parent="." unique_id=1550453511]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Titulo" unique_id=471482815]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_ol1ep")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Titulo/TextureRect" unique_id=313252894]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45100003
+anchor_top = 0.65800005
+anchor_right = 0.59400004
+anchor_bottom = 0.65800005
+offset_left = -211.55206
+offset_top = -22.384033
+offset_right = 150.71198
+offset_bottom = 22.615967
+text = "Clase 4 - Intro a programación"
+label_settings = SubResource("LabelSettings_ys6oj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Agenda2" type="MarginContainer" parent="." unique_id=1006865457]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_ltgl6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Agenda2" unique_id=1638104057]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_wx88p")
+bbcode_enabled = true
+visible_characters_behavior = 2
+
+[node name="TextureRect" type="TextureRect" parent="Agenda2" unique_id=1588555051]
+layout_mode = 2
+texture = ExtResource("4_cp20q")
+stretch_mode = 5
+
+[node name="Agenda" type="MarginContainer" parent="." unique_id=1815599285]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_ltgl6")
+animate_screen_color_on_enter = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Agenda" unique_id=1937125726]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_wx88p")
+bbcode_enabled = true
+text = "[font_size=70][color=#009e9f]Agenda
+[font_size=50]
+> Intro a programación
+[color=#EEEEEE][font_size=40]	- Funciones, valores y variables
+	- Usando los nodos de Godot con código
+	- Movimiento 2D visto desde arriba
+	- Movimiento 2D plataformero
+[/font_size][/color]
+> Trabajo en el TP
+[/font_size]
+[/color]
+[/font_size]"
+visible_characters_behavior = 2
+
+[node name="PrimerProgramaAnio" type="PanelContainer" parent="." unique_id=2024223085]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wx88p")
+script = ExtResource("4_i4rbl")
+
+[node name="Label" type="Label" parent="PrimerProgramaAnio" unique_id=266786311]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_4heot")
+text = "¿Cuándo creen que
+se escribió el primer programa?"
+label_settings = ExtResource("6_vyuff")
+horizontal_alignment = 1
+
+[node name="EnterAnimation" parent="PrimerProgramaAnio/Label" unique_id=458794268 instance=ExtResource("7_vq5sn")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = -223.0
+offset_right = 1092.0
+offset_bottom = 365.0
+grow_horizontal = 1
+grow_vertical = 1
+pivot_offset = Vector2(553, 291)
+
+[node name="PrimerProgramaAnio3" type="PanelContainer" parent="." unique_id=233821804]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wx88p")
+script = ExtResource("4_i4rbl")
+
+[node name="Label" type="Label" parent="PrimerProgramaAnio3" unique_id=451824306]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_4heot")
+text = "¿Cuándo creen que
+se escribió el primer programa?"
+label_settings = ExtResource("6_vyuff")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="PrimerProgramaAnio3/Label" unique_id=720504607]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 237.0
+offset_right = 519.0
+offset_bottom = 378.0
+pivot_offset = Vector2(158, 70.5)
+theme_override_styles/normal = ExtResource("5_4heot")
+text = "1843
+Ada Lovelace"
+label_settings = ExtResource("6_vyuff")
+horizontal_alignment = 1
+
+[node name="EnterAnimation" parent="PrimerProgramaAnio3/Label/Label2" unique_id=288660283 instance=ExtResource("7_vq5sn")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 297.0
+offset_top = -165.0
+offset_right = 297.0
+offset_bottom = -165.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="TextureRect" type="TextureRect" parent="PrimerProgramaAnio3/Label/Label2" unique_id=979053080]
+layout_mode = 0
+offset_left = 338.0
+offset_top = -73.0
+offset_right = 1106.0
+offset_bottom = 228.0
+texture = ExtResource("7_0j6un")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="PrimerProgramaAnio4" type="PanelContainer" parent="." unique_id=1898866182]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wx88p")
+script = ExtResource("4_i4rbl")
+
+[node name="Label" type="Label" parent="PrimerProgramaAnio4" unique_id=1586019284]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_4heot")
+text = "¿Cuándo creen que
+se escribió el primer programa?"
+label_settings = ExtResource("6_vyuff")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="PrimerProgramaAnio4/Label" unique_id=847363132]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 237.0
+offset_right = 519.0
+offset_bottom = 378.0
+pivot_offset = Vector2(158, 70.5)
+theme_override_styles/normal = ExtResource("5_4heot")
+text = "1843
+Ada Lovelace"
+label_settings = ExtResource("6_vyuff")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PrimerProgramaAnio4/Label/Label2" unique_id=595086112]
+layout_mode = 0
+offset_left = 338.0
+offset_top = -73.0
+offset_right = 1106.0
+offset_bottom = 228.0
+texture = ExtResource("7_0j6un")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Label3" type="Label" parent="PrimerProgramaAnio4/Label" unique_id=522976252]
+layout_mode = 0
+offset_top = -221.0
+offset_right = 1092.0
+offset_bottom = 136.0
+pivot_offset = Vector2(546, 178.5)
+theme_override_styles/normal = SubResource("StyleBoxFlat_i4rbl")
+text = "\"Puede operar sobre otras cosas aparte de números en tanto que entre esos objetos se pueda encontrar una relación que pueda ser expresada por la ciencia de operaciones.
+Supongamos, por ejemplo, que la relación entre el tono en la ciencia de la armonía y la composición musical fuese representable de esta manera, entonces la máquina podría componer piezas musicales de cualquier nivel de complejidad.\""
+label_settings = SubResource("LabelSettings_i4rbl")
+horizontal_alignment = 3
+autowrap_mode = 3
+
+[node name="EnterAnimation" parent="PrimerProgramaAnio4/Label/Label3" unique_id=853125708 instance=ExtResource("9_pin1d")]
+layout_mode = 1
+
+[node name="PrimerProgramaAnio5" type="PanelContainer" parent="." unique_id=262783572]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wx88p")
+script = ExtResource("4_i4rbl")
+
+[node name="Label" type="Label" parent="PrimerProgramaAnio5" unique_id=1967087527]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_4heot")
+text = "Programación"
+label_settings = SubResource("LabelSettings_pin1d")
+horizontal_alignment = 1
+
+[node name="PrimerProgramaAnio6" type="PanelContainer" parent="." unique_id=1410986522]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wx88p")
+script = ExtResource("4_i4rbl")
+
+[node name="Label" type="Label" parent="PrimerProgramaAnio6" unique_id=1390495581]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("5_4heot")
+text = "Programación"
+label_settings = SubResource("LabelSettings_cp20q")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="PrimerProgramaAnio6/Label" unique_id=1980794785]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 1092.0
+offset_bottom = 165.0
+pivot_offset = Vector2(546, 34.5)
+text = "Rigurosidad"
+label_settings = ExtResource("6_vyuff")
+
+[node name="EnterAnimation" parent="PrimerProgramaAnio6/Label/Label2" unique_id=2028442659 instance=ExtResource("9_pin1d")]
+layout_mode = 1
+
+[node name="Label3" type="Label" parent="PrimerProgramaAnio6/Label" unique_id=1231174021]
+layout_mode = 0
+offset_top = 99.0
+offset_right = 1092.0
+offset_bottom = 168.0
+pivot_offset = Vector2(546, 34.5)
+text = "Imaginación"
+label_settings = ExtResource("6_vyuff")
+horizontal_alignment = 2
+
+[node name="EnterAnimation" parent="PrimerProgramaAnio6/Label/Label3" unique_id=675539502 instance=ExtResource("9_pin1d")]
+layout_mode = 1
+
+[node name="EnunciadoPepita" type="CenterContainer" parent="." unique_id=1781247621]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("9_ol1ep")
+
+[node name="PanelContainer" type="PanelContainer" parent="EnunciadoPepita" unique_id=994620770]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ltgl6")
+
+[node name="TextureRect" type="TextureRect" parent="EnunciadoPepita/PanelContainer" unique_id=2039886447]
+texture_filter = 1
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("10_ltgl6")
+stretch_mode = 5
+
+[node name="EnterAnimation" parent="EnunciadoPepita" unique_id=1994317849 instance=ExtResource("7_vq5sn")]
+layout_mode = 2
+
+[node name="EnunciadoPepita2" type="CenterContainer" parent="." unique_id=1971631712]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("11_dea2o")
+
+[node name="PanelContainer" type="PanelContainer" parent="EnunciadoPepita2" unique_id=1709340599]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ltgl6")
+
+[node name="TextureRect" type="TextureRect" parent="EnunciadoPepita2/PanelContainer" unique_id=1533694578]
+texture_filter = 1
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("10_ltgl6")
+stretch_mode = 5
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="EnunciadoPepita2/PanelContainer/TextureRect" unique_id=453560469]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 0
+offset_left = 25.0
+offset_top = 7.0
+offset_right = 125.0
+offset_bottom = 17.0
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture2D_dea2o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnunciadoPepita2" unique_id=920736503]
+libraries/ = SubResource("AnimationLibrary_vyuff")
+
+[node name="EnunciadoPepita3" type="CenterContainer" parent="." unique_id=589348454]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("11_dea2o")
+
+[node name="PanelContainer" type="PanelContainer" parent="EnunciadoPepita3" unique_id=1600266455]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ltgl6")
+
+[node name="TextureRect" type="TextureRect" parent="EnunciadoPepita3/PanelContainer" unique_id=1914355768]
+texture_filter = 1
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("10_ltgl6")
+stretch_mode = 5
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="EnunciadoPepita3/PanelContainer/TextureRect" unique_id=892182795]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 0
+offset_left = 25.0
+offset_top = 7.0
+offset_right = 125.0
+offset_bottom = 17.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture2D_dea2o")
+
+[node name="NavigationE" type="TextureRect" parent="EnunciadoPepita3/PanelContainer/TextureRect" unique_id=697868493]
+texture_filter = 2
+layout_mode = 0
+offset_left = 160.0
+offset_top = 43.0
+offset_right = 224.0
+offset_bottom = 107.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(32, 32)
+texture = ExtResource("12_0j6un")
+
+[node name="NavigationN" type="TextureRect" parent="EnunciadoPepita3/PanelContainer/TextureRect" unique_id=1915178971]
+texture_filter = 2
+layout_mode = 0
+offset_left = 43.0
+offset_top = -62.0
+offset_right = 107.0
+offset_bottom = 2.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(32, 32)
+texture = ExtResource("13_i4rbl")
+
+[node name="NavigationS" type="TextureRect" parent="EnunciadoPepita3/PanelContainer/TextureRect" unique_id=1230817641]
+texture_filter = 2
+layout_mode = 0
+offset_left = 43.0
+offset_top = 137.0
+offset_right = 107.0
+offset_bottom = 201.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(32, 32)
+texture = ExtResource("14_pin1d")
+
+[node name="NavigationW" type="TextureRect" parent="EnunciadoPepita3/PanelContainer/TextureRect" unique_id=2105517835]
+texture_filter = 2
+layout_mode = 0
+offset_left = -66.0
+offset_top = 43.0
+offset_right = -2.0
+offset_bottom = 107.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(32, 32)
+texture = ExtResource("15_cp20q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnunciadoPepita3" unique_id=698085258]
+libraries/ = SubResource("AnimationLibrary_pin1d")
+
+[node name="EnunciadoPepita4" type="CenterContainer" parent="." unique_id=1828360306]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("11_dea2o")
+
+[node name="PanelContainer" type="PanelContainer" parent="EnunciadoPepita4" unique_id=568560813]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ltgl6")
+
+[node name="Control" type="Control" parent="EnunciadoPepita4/PanelContainer" unique_id=748810294]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="EnunciadoPepita4/PanelContainer/Control" unique_id=607307826]
+texture_filter = 1
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 0
+offset_left = 225.0
+offset_top = 125.0
+offset_right = 375.00015
+offset_bottom = 275.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("10_ltgl6")
+stretch_mode = 5
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="EnunciadoPepita4/PanelContainer/Control/TextureRect" unique_id=1587262935]
+custom_minimum_size = Vector2(100, 10)
+layout_mode = 0
+offset_left = 25.0
+offset_top = 7.0
+offset_right = 125.0
+offset_bottom = 17.0
+value = 100.0
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture2D_i4rbl")
+texture_progress = SubResource("GradientTexture2D_dea2o")
+
+[node name="NavigationE" type="TextureRect" parent="EnunciadoPepita4/PanelContainer/Control/TextureRect" unique_id=1833603907]
+texture_filter = 2
+layout_mode = 0
+offset_left = 160.0
+offset_top = 43.0
+offset_right = 224.0
+offset_bottom = 107.0
+pivot_offset = Vector2(32, 32)
+texture = ExtResource("12_0j6un")
+
+[node name="NavigationN" type="TextureRect" parent="EnunciadoPepita4/PanelContainer/Control/TextureRect" unique_id=1283085196]
+texture_filter = 2
+layout_mode = 0
+offset_left = 43.0
+offset_top = -62.0
+offset_right = 107.0
+offset_bottom = 2.0
+pivot_offset = Vector2(32, 32)
+texture = ExtResource("13_i4rbl")
+
+[node name="NavigationS" type="TextureRect" parent="EnunciadoPepita4/PanelContainer/Control/TextureRect" unique_id=824193763]
+texture_filter = 2
+layout_mode = 0
+offset_left = 43.0
+offset_top = 137.0
+offset_right = 107.0
+offset_bottom = 201.0
+pivot_offset = Vector2(32, 32)
+texture = ExtResource("14_pin1d")
+
+[node name="NavigationW" type="TextureRect" parent="EnunciadoPepita4/PanelContainer/Control/TextureRect" unique_id=1722514126]
+texture_filter = 2
+layout_mode = 0
+offset_left = -66.0
+offset_top = 43.0
+offset_right = -2.0
+offset_bottom = 107.0
+pivot_offset = Vector2(32, 32)
+texture = ExtResource("15_cp20q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnunciadoPepita4" unique_id=2009568229]
+libraries/ = SubResource("AnimationLibrary_qpqxj")

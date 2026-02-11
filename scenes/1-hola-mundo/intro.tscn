@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dvaqhwst6kciy"]
+
+[ext_resource type="Script" uid="uid://2c43k1fg66ku" path="res://scenes/1-hola-mundo/pepita_con_vectores.gd" id="2_2txux"]
+
+[node name="Intro" type="Node2D" unique_id=1031709008]
+texture_filter = 1
+
+[node name="Pepita" type="Node2D" parent="." unique_id=668932294]
+
+[node name="Pepita2" type="Node2D" parent="." unique_id=744200005]
+script = ExtResource("2_2txux")

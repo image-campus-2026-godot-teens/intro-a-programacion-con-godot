@@ -1,0 +1,1570 @@
+[gd_scene format=3 uid="uid://j75ioh1d24n8"]
+
+[ext_resource type="Script" uid="uid://dtoovey3km3b3" path="res://addons/slides/diapositivas.gd" id="1_fa6mh"]
+[ext_resource type="Texture2D" uid="uid://52bkk2p7fwqy" path="res://addons/slides/diapos-clase-3/imagenes/titulo_image_campus.png" id="2_ys6oj"]
+[ext_resource type="Script" uid="uid://e3yu4dbsxsq3" path="res://addons/slides/diapos-clase-3/scripts/scene_tree_highlight.gd" id="3_3vw06"]
+[ext_resource type="Script" uid="uid://c2xi20hmskqdn" path="res://addons/slides/diapos-clase-3/agenda.gd" id="3_d2qvv"]
+[ext_resource type="StyleBox" uid="uid://r4ywjvdocm3y" path="res://addons/slides/diapos-clase-3/style_box_label.tres" id="3_dyc6h"]
+[ext_resource type="LabelSettings" uid="uid://bx7uaqsehr5qj" path="res://addons/slides/diapos-clase-3/label_settings.tres" id="3_iahat"]
+[ext_resource type="Script" uid="uid://c3vr1pkpol72n" path="res://addons/slides/diapos-clase-3/scripts/file_system_highlight.gd" id="6_d8sgk"]
+[ext_resource type="PackedScene" uid="uid://b1cetgoyyb8ma" path="res://addons/slides/diapos-clase-3/effects/enter_animation.tscn" id="6_u44qd"]
+[ext_resource type="Script" uid="uid://bxm0fgudrg6n0" path="res://addons/slides/diapos-clase-3/inspector_highlight.gd" id="8_hndcw"]
+[ext_resource type="PackedScene" uid="uid://bi6k1cmgykk1w" path="res://addons/slides/diapos-clase-3/effects/highlight_node.tscn" id="8_oasln"]
+[ext_resource type="Script" uid="uid://hqghl7rccetf" path="res://addons/slides/diapos-clase-3/repaso_herramientas_seleccion.gd" id="9_58ghq"]
+[ext_resource type="Script" uid="uid://uolqd83nwgw0" path="res://addons/slides/diapos-clase-3/godot_icon_rect.gd" id="9_wx88p"]
+[ext_resource type="Script" uid="uid://kcfv225i5vvf" path="res://addons/slides/diapos-clase-3/repaso_nodos.gd" id="13_a5fkp"]
+[ext_resource type="Script" uid="uid://dvwhoq13sh28p" path="res://addons/slides/diapos-clase-3/repaso_nodos_editor.gd" id="14_3ujbe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ys6oj"]
+font_size = 35
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wx88p"]
+content_margin_left = 30.0
+content_margin_top = 30.0
+content_margin_right = 30.0
+content_margin_bottom = 30.0
+bg_color = Color(0, 0, 0, 0.9019608)
+
+[sub_resource type="DPITexture" id="DPITexture_wx88p"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#8da5f3\" d=\"M5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4zM3 7a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0zm10 2a1 1 0 0 1-2 0V7a1 1 0 0 1 2 0zm-2.172 3.828a4 4 0 0 1-5.656 0 1 1 0 0 1 1.414-1.414 2 2 0 0 0 2.828 0 1 1 0 0 1 1.414 1.414z\"/></svg>
+"
+base_scale = 1.25
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_a5fkp"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#8da5f3\" d=\"M8 1a7 7 0 0 0 0 14A7 7 0 0 0 8 1zm1.951 1.334A6 6 0 0 1 14.001 8h-7a2 2 0 0 0-.95-1.7c1.346-2.029 2.604-3.263 3.9-3.967zm-6.828 2.18c.146.65.358 1.283.684 1.884A2 2 0 0 0 3 8H2a6 6 0 0 1 1.123-3.486zM3.8 9.6a2 2 0 0 0 2.4 0c1.472 2.027 2.728 3.264 3.8 4a6 6 0 0 1-7.15-2.5c.25-.6.5-1 .95-1.5z\"/></svg>
+"
+base_scale = 1.25
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_d2qvv"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#8da5f3\" d=\"M6.492 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h1v.99a1 1 0 0 0-.316.062l-2.051.684-.684-2.051a1 1 0 0 0-1.898.631l1 3a1 1 0 0 0 1.265.633l1.684-.56v.61c0 .041.019.076.024.116l-4.579 3.052a1 1 0 1 0 1.11 1.664l5.056-3.37 1.495 2.986a1 1 0 0 0 1.21.502l3-1a1 1 0 1 0-.632-1.897l-2.178.725-.975-1.951a.981.981 0 0 0 .469-.827V9h1.383l.722 1.448a1 1 0 1 0 1.79-.895l-1-2A1 1 0 0 0 12.492 7h-3V6h1a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm0 2h1v2h-1z\"/></svg>
+"
+base_scale = 1.25
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_3ujbe"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#8da5f3\" d=\"M3 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H3zm0 1h10a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm0 1v2h2V3zm8 0v2h2V3zm-8 8v2h2v-2zm8 0v2h2v-2z\"/></svg>
+"
+base_scale = 1.25
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_87ews"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"none\" stroke=\"#8da5f3\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M14 14H2V2h12z\"/></svg>
+"
+base_scale = 1.25
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_nfd44"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#8da5f3\" d=\"M9 2a3 3 0 0 0-3 2.777 3 3 0 1 0-3 5.047V12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-1l3 2V7l-3 2V7.23A3 3 0 0 0 9 2z\"/></svg>
+"
+base_scale = 1.25
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_xiac7"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><g fill=\"#8da5f3\"><path fill-opacity=\".4\" d=\"M7 0a2 2 0 0 0-2 2h7a2 2 0 0 1 2 2v6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z\"/><path fill-opacity=\".6\" d=\"M5 2a2 2 0 0 0-2 2h7a2 2 0 0 1 2 2v7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z\"/><path d=\"M3 4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM2 9a1 1 0 0 1 2 0v1a1 1 0 0 1-2 0zm7 0a1 1 0 0 1 2 0v1a1 1 0 0 1-2 0zm0 3a2.5 2 0 0 1-5 0z\"/></g></svg>
+"
+base_scale = 1.25
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a5fkp"]
+bg_color = Color(0.6736063, 0.08463571, 0.17735481, 0.8627451)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_a5fkp"]
+font_size = 30
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0.09411765, 0.09411765, 0.09411765, 0.54509807)
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87ews"]
+bg_color = Color(0.66554326, 0.77980113, 1.540184e-06, 0.8627451)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2qvv"]
+bg_color = Color(0.14901961, 0, 0.30980393, 0.8627451)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d2qvv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ujbe"]
+bg_color = Color(0.08777862, 0.4723484, 0.1710479, 0.8627451)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[node name="Diapositivas" type="Control" unique_id=2089374784]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_fa6mh")
+diapositiva_actual = 15
+
+[node name="Titulo" type="Control" parent="." unique_id=1550453511]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Titulo" unique_id=471482815]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_ys6oj")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Titulo/TextureRect" unique_id=313252894]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45100003
+anchor_top = 0.65800005
+anchor_right = 0.59400004
+anchor_bottom = 0.65800005
+offset_left = -211.55206
+offset_top = -22.384033
+offset_right = 150.71198
+offset_bottom = 22.615967
+text = "Clase 3 - Godot, nodos y escenas"
+label_settings = SubResource("LabelSettings_ys6oj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Agenda" type="MarginContainer" parent="." unique_id=1815599285]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_d2qvv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Agenda" unique_id=1937125726]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_wx88p")
+bbcode_enabled = true
+text = "[font_size=70][color=#009e9f]Agenda
+[font_size=50]
+> Repaso del editor
+> Nodos y escenas
+> [color=#EEEEEE]Actividad:[/color] Empezar el proyecto en Godot
+[/font_size]
+[/color]
+[/font_size]"
+visible_characters_behavior = 2
+
+[node name="Vacio" type="MarginContainer" parent="." unique_id=2090515138]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="FileSystem" type="Control" parent="." unique_id=197698627]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("6_d8sgk")
+
+[node name="Label" type="Label" parent="FileSystem" unique_id=1677334675]
+modulate = Color(0, 1, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -242.0
+offset_top = -71.0
+offset_right = 242.0
+offset_bottom = 70.0
+pivot_offset = Vector2(242, 70.5)
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Sistema de Archivos
+o FileSystem"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="OrigenFlecha" type="Control" parent="FileSystem/Label" unique_id=129268243]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="EnterAnimation" parent="FileSystem/Label" unique_id=853125708 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+offset_left = -334.0
+offset_top = -253.0
+offset_right = -334.0
+offset_bottom = -253.0
+
+[node name="HighlightNode" parent="FileSystem" unique_id=1760988222 instance=ExtResource("8_oasln")]
+layout_mode = 1
+
+[node name="EstructuraDeProyecto" type="CenterContainer" parent="." unique_id=1489679851]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="EstructuraDeProyecto" unique_id=266786311]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Ordenar
+para poder encontrar cosas"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="EnterAnimation" parent="EstructuraDeProyecto" unique_id=458794268 instance=ExtResource("6_u44qd")]
+layout_mode = 2
+
+[node name="EstructuraDeProyecto2" type="CenterContainer" parent="." unique_id=946861103]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="EstructuraDeProyecto2" unique_id=297657515]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Posible estructura:
+- assets/
+- scenes/"
+label_settings = ExtResource("3_iahat")
+
+[node name="EnterAnimation" parent="EstructuraDeProyecto2" unique_id=1994317849 instance=ExtResource("6_u44qd")]
+layout_mode = 2
+
+[node name="EstructuraDeProyecto3" type="CenterContainer" parent="." unique_id=1418279752]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="EstructuraDeProyecto3" unique_id=365432098]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Posible estructura:
+- assets/
+- scenes/
+   - game_elements/
+   - levels/"
+label_settings = ExtResource("3_iahat")
+
+[node name="EnterAnimation" parent="EstructuraDeProyecto3" unique_id=719012502 instance=ExtResource("6_u44qd")]
+layout_mode = 2
+
+[node name="SceneTree" type="Control" parent="." unique_id=119599784]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("3_3vw06")
+color = Color(0.92111725, 0.9659985, 0, 1)
+
+[node name="Label" type="Label" parent="SceneTree" unique_id=1336551536]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -242.0
+offset_top = -71.0
+offset_right = 242.0
+offset_bottom = 70.0
+pivot_offset = Vector2(242, 70.5)
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Árbol de escena
+o SceneTree"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="OrigenFlecha" type="Control" parent="SceneTree/Label" unique_id=1649975155]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="EnterAnimation" parent="SceneTree/Label" unique_id=995298928 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+offset_left = -334.0
+offset_top = -253.0
+offset_right = -334.0
+offset_bottom = -253.0
+
+[node name="HighlightNode" parent="SceneTree" unique_id=24887973 instance=ExtResource("8_oasln")]
+layout_mode = 1
+
+[node name="SceneTree-Significado" type="Control" parent="." unique_id=1620370216]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="SceneTree-Significado" unique_id=1228788750]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.0
+offset_top = -70.5
+offset_right = 417.0
+offset_bottom = 70.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Árbol de escena
+Nos muestra la jerarquía de nodos
+Cuál nodo es padre de cuál"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="EnterAnimation" parent="SceneTree-Significado" unique_id=384077418 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+
+[node name="SceneTree-Significado2" type="Control" parent="." unique_id=1428580601]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="SceneTree-Significado2" unique_id=101594897]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.0
+offset_top = -70.5
+offset_right = 417.0
+offset_bottom = 70.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "¿Qué significa que un nodo sea padre de otro?"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="EnterAnimation" parent="SceneTree-Significado2" unique_id=1130543314 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+
+[node name="SceneTree-Significado3-XY" type="MarginContainer" parent="." unique_id=478531023]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="SceneTree-Significado3-XY" unique_id=2080739332]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Al mover a un nodo,
+todos sus hijos se mueven con él"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 2
+
+[node name="EnterAnimation" parent="SceneTree-Significado3-XY" unique_id=1171794114 instance=ExtResource("6_u44qd")]
+layout_mode = 2
+
+[node name="SceneTree-Significado-QueEraUnNodo" type="Control" parent="." unique_id=1140877913]
+visible = false
+layout_mode = 1
+anchor_left = 0.45000002
+anchor_top = 0.638
+anchor_right = 0.52400005
+anchor_bottom = 0.73300004
+offset_left = -518.4
+offset_top = -413.424
+offset_right = 548.3519
+offset_bottom = 173.01596
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="SceneTree-Significado-QueEraUnNodo" unique_id=585598647]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.73300004
+anchor_right = 0.5
+anchor_bottom = 0.75500005
+offset_left = -417.0
+offset_top = -200.98404
+offset_right = 417.0
+offset_bottom = 141.75998
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "¿Y para qué servían los nodos?
+
+Son los bloques de construcción
+de Godot.
+Todo está hecho de nodos."
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="EnterAnimation" parent="SceneTree-Significado-QueEraUnNodo" unique_id=1531772932 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+
+[node name="SceneTree-Significado-QueEraUnNodo2" type="Control" parent="." unique_id=18070083]
+visible = false
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.87700003
+anchor_right = 0.5
+anchor_bottom = 0.88000005
+offset_left = -576.0
+offset_top = -568.296
+offset_right = 576.0
+offset_bottom = 77.75995
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="SceneTree-Significado-QueEraUnNodo2" unique_id=718276701]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85400003
+anchor_right = 0.5
+anchor_bottom = 0.86200005
+offset_left = -417.0
+offset_top = -89.39203
+offset_right = 417.0
+offset_bottom = 46.42395
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Cada nodo cumple una función:"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="EnterAnimation" parent="SceneTree-Significado-QueEraUnNodo2" unique_id=734436387 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+
+[node name="SceneTree-Significado-QueEraUnNodo3" type="Control" parent="." unique_id=717451073]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="SceneTree-Significado-QueEraUnNodo3" unique_id=630187418]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.89100003
+anchor_right = 0.5
+anchor_bottom = 0.89100003
+offset_left = -417.0
+offset_top = -36.368042
+offset_right = 417.0
+offset_bottom = 36.131958
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "   Sprite2D -> Muestra una imagen"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="SceneTree-Significado-QueEraUnNodo3/Label" unique_id=1085352271]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25100002
+anchor_top = 0.546
+anchor_right = 0.25100002
+anchor_bottom = 0.546
+offset_left = -208.33401
+offset_top = -23.085
+offset_right = -169.33401
+offset_bottom = 15.915001
+texture = SubResource("DPITexture_wx88p")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "Sprite2D"
+
+[node name="EnterAnimation" parent="SceneTree-Significado-QueEraUnNodo3" unique_id=643561808 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="SceneTree-Significado-QueEraUnNodo5" type="Control" parent="." unique_id=459215342]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="SceneTree-Significado-QueEraUnNodo5" unique_id=1937297707]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.89400005
+anchor_right = 0.5
+anchor_bottom = 0.89400005
+offset_left = -440.5
+offset_top = -36.31201
+offset_right = 440.5
+offset_bottom = 36.18799
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "   RigidBody2D -> Elemento con física
+calculada automáticamente"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="SceneTree-Significado-QueEraUnNodo5/Label" unique_id=1481972225]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.268
+anchor_right = 0.017
+anchor_bottom = 0.268
+offset_left = -19.477001
+offset_top = -19.537994
+offset_right = 19.522999
+offset_bottom = 19.667503
+texture = SubResource("DPITexture_a5fkp")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "RigidBody2D"
+
+[node name="EnterAnimation" parent="SceneTree-Significado-QueEraUnNodo5" unique_id=379579223 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="SceneTree-Significado-QueEraUnNodo4" type="Control" parent="." unique_id=194533175]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.99829817, 0.99829817)
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="SceneTree-Significado-QueEraUnNodo4" unique_id=1962537937]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.837
+anchor_right = 0.5
+anchor_bottom = 0.837
+offset_left = -417.0
+offset_top = -70.37604
+offset_right = 417.0
+offset_bottom = 70.62396
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "   CharacterBody2D -> Personaje
+con movimiento programado"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="SceneTree-Significado-QueEraUnNodo4/Label" unique_id=1546109710]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.23600002
+anchor_right = 0.034
+anchor_bottom = 0.23600002
+offset_left = -19.356
+offset_top = -19.526001
+offset_right = 19.644
+offset_bottom = 19.473999
+texture = SubResource("DPITexture_d2qvv")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "CharacterBody2D"
+
+[node name="EnterAnimation" parent="SceneTree-Significado-QueEraUnNodo4" unique_id=1787591670 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="SceneTree-Significado-QueEraUnNodo6" type="Control" parent="." unique_id=232896340]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="SceneTree-Significado-QueEraUnNodo6" unique_id=1909749179]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85700005
+anchor_right = 0.5
+anchor_bottom = 0.878
+offset_left = -522.0
+offset_top = -70.33606
+offset_right = 522.0
+offset_bottom = 57.05597
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "     StaticBody2D -> Frena a otros elementos
+Funciona como una pared/piso/techo"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="SceneTree-Significado-QueEraUnNodo6/Label" unique_id=575752066]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.23600002
+anchor_right = 0.034
+anchor_bottom = 0.23600002
+offset_left = -24.496002
+offset_top = -16.526001
+offset_right = 14.503998
+offset_bottom = 22.473999
+texture = SubResource("DPITexture_3ujbe")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "StaticBody2D"
+
+[node name="EnterAnimation" parent="SceneTree-Significado-QueEraUnNodo6" unique_id=1900207863 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="SceneTree-Significado-QueEraUnNodo7" type="Control" parent="." unique_id=2070615297]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="SceneTree-Significado-QueEraUnNodo7" unique_id=288768650]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85700005
+anchor_right = 0.5
+anchor_bottom = 0.878
+offset_left = -522.0
+offset_top = -70.33606
+offset_right = 522.0
+offset_bottom = 57.05597
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "     CollisionShape2D -> Provee la FORMA
+de colisión a otros nodos:
+StaticBody2D, CharacterBody2D, RigidBody2D"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="SceneTree-Significado-QueEraUnNodo7/Label" unique_id=988772257]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.083000004
+anchor_top = 0.23600002
+anchor_right = 0.083000004
+anchor_bottom = 0.24900001
+offset_left = -19.632004
+offset_top = -36.268005
+offset_right = 19.367996
+offset_bottom = -0.037002563
+texture = SubResource("DPITexture_87ews")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "CollisionShape2D"
+metadata/_edit_use_anchors_ = true
+
+[node name="EnterAnimation" parent="SceneTree-Significado-QueEraUnNodo7" unique_id=1784315133 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="RepasoHerramientas-Seleccion" type="MarginContainer" parent="." unique_id=1375187232]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("9_58ghq")
+
+[node name="Label" type="Label" parent="RepasoHerramientas-Seleccion" unique_id=1663562128]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Herramienta de
+selección"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="OrigenFlecha" type="Control" parent="RepasoHerramientas-Seleccion/Label" unique_id=1660090647]
+anchors_preset = 0
+offset_left = -9.0
+offset_top = 58.0
+offset_right = 31.0
+offset_bottom = 98.0
+mouse_filter = 2
+
+[node name="HighlightNode" parent="RepasoHerramientas-Seleccion" unique_id=1879722628 instance=ExtResource("8_oasln")]
+layout_mode = 2
+
+[node name="RepasoHerramientas-Mover" type="MarginContainer" parent="." unique_id=221366067]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("9_58ghq")
+herramienta = 1
+
+[node name="Label" type="Label" parent="RepasoHerramientas-Mover" unique_id=1520986490]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Herramienta de
+mover"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="OrigenFlecha" type="Control" parent="RepasoHerramientas-Mover/Label" unique_id=72391209]
+anchors_preset = 0
+offset_top = 44.0
+offset_right = 40.0
+offset_bottom = 84.0
+mouse_filter = 2
+
+[node name="HighlightNode" parent="RepasoHerramientas-Mover" unique_id=678833594 instance=ExtResource("8_oasln")]
+layout_mode = 2
+
+[node name="RepasoHerramientas-Paneo" type="MarginContainer" parent="." unique_id=720938465]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("9_58ghq")
+herramienta = 3
+
+[node name="Label" type="Label" parent="RepasoHerramientas-Paneo" unique_id=788046004]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Herramienta de
+Paneo
+
+para movernos en la pantalla sin
+mover los nodos"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="OrigenFlecha" type="Control" parent="RepasoHerramientas-Paneo/Label" unique_id=1008216595]
+anchors_preset = 0
+offset_left = 382.0
+offset_top = -4.0
+offset_right = 422.0
+offset_bottom = 36.0
+mouse_filter = 2
+
+[node name="HighlightNode" parent="RepasoHerramientas-Paneo" unique_id=643322300 instance=ExtResource("8_oasln")]
+layout_mode = 2
+
+[node name="RepasoHerramientas-Bloquear" type="MarginContainer" parent="." unique_id=27642934]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("9_58ghq")
+herramienta = 2
+
+[node name="Label" type="Label" parent="RepasoHerramientas-Bloquear" unique_id=1904418356]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Herramienta de
+bloquear
+
+Para evitar que un nodo se pueda
+seleccionar por error"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="OrigenFlecha" type="Control" parent="RepasoHerramientas-Bloquear/Label" unique_id=1271849173]
+anchors_preset = 0
+offset_left = 409.0
+offset_top = -4.0
+offset_right = 449.0
+offset_bottom = 36.0
+mouse_filter = 2
+
+[node name="HighlightNode" parent="RepasoHerramientas-Bloquear" unique_id=1787669943 instance=ExtResource("8_oasln")]
+layout_mode = 2
+
+[node name="Inspector" type="Control" parent="." unique_id=612799356]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("8_hndcw")
+color = Color(1, 0.79180247, 0.903902, 1)
+
+[node name="Label" type="Label" parent="Inspector" unique_id=8686784]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = -160.0
+offset_right = 424.0
+offset_bottom = 197.0
+pivot_offset = Vector2(190.5, 178.5)
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Inspector
+
+Acá están
+las propiedades
+de los nodos"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="OrigenFlecha" type="Control" parent="Inspector/Label" unique_id=1554719255]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 382.0
+offset_top = -214.0
+offset_right = 422.0
+offset_bottom = -174.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="EnterAnimation" parent="Inspector/Label" unique_id=1101318828 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+offset_left = -619.0
+offset_top = -164.0
+offset_right = -619.0
+offset_bottom = -164.0
+
+[node name="HighlightNode" parent="Inspector" unique_id=1634257438 instance=ExtResource("8_oasln")]
+layout_mode = 1
+
+[node name="SceneTree-Significado-QueEraUnNodo8" type="Control" parent="." unique_id=744641347]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="SceneTree-Significado-QueEraUnNodo8" unique_id=122956296]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85700005
+anchor_right = 0.5
+anchor_bottom = 0.85700005
+offset_left = -522.0
+offset_top = -70.33606
+offset_right = 522.0
+offset_bottom = 70.66394
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "     Camera2D -> Cuando el juego
+está corriendo, vemos lo que ve la cámara activa"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="SceneTree-Significado-QueEraUnNodo8/Label" unique_id=2123978785]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18969429
+anchor_top = 0.24163121
+anchor_right = 0.18970795
+anchor_bottom = 0.24163121
+offset_left = -19.632004
+offset_top = -19.069996
+offset_right = 19.35199
+offset_bottom = 18.993996
+texture = SubResource("DPITexture_nfd44")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "Camera2D"
+metadata/_edit_use_anchors_ = true
+
+[node name="EnterAnimation" parent="SceneTree-Significado-QueEraUnNodo8" unique_id=547938557 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="SceneTree-Significado-QueEraUnNodo9" type="Control" parent="." unique_id=1297344480]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="SceneTree-Significado-QueEraUnNodo9" unique_id=1002778043]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85700005
+anchor_right = 0.5
+anchor_bottom = 0.85700005
+offset_left = -522.0
+offset_top = -70.33606
+offset_right = 522.0
+offset_bottom = 70.66394
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "     AnimatedSprite2D -> Una versión del
+Sprite2D que facilita agregar animaciones"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="SceneTree-Significado-QueEraUnNodo9/Label" unique_id=343203893]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07148659
+anchor_top = 0.24163121
+anchor_right = 0.07150026
+anchor_bottom = 0.24163121
+offset_left = -19.632004
+offset_top = -19.069996
+offset_right = 19.35199
+offset_bottom = 18.993996
+texture = SubResource("DPITexture_xiac7")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "AnimatedSprite2D"
+metadata/_edit_use_anchors_ = true
+
+[node name="EnterAnimation" parent="SceneTree-Significado-QueEraUnNodo9" unique_id=822490657 instance=ExtResource("6_u44qd")]
+layout_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="RepasoNodos" type="Control" parent="." unique_id=1456085347]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("13_a5fkp")
+
+[node name="ColorRect" type="ColorRect" parent="RepasoNodos" unique_id=473405650]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="RepasoNodos" unique_id=355731706]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.08400001
+anchor_right = 0.5
+anchor_bottom = 0.08400001
+offset_left = -88.0
+offset_top = -34.432003
+offset_right = 88.0
+offset_bottom = 34.567997
+grow_horizontal = 2
+text = "Repaso"
+label_settings = ExtResource("3_iahat")
+
+[node name="CollisionShape2D" type="Label" parent="RepasoNodos/Label" unique_id=448398683]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.81900007
+anchor_top = 0.16800001
+anchor_right = 0.81900007
+anchor_bottom = 0.16800001
+offset_left = 14.846954
+offset_top = 98.408
+offset_right = 596.8469
+offset_bottom = 212.40797
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_a5fkp")
+text = "     CollisionShape2D -> Provee la FORMA
+de colisión a otros nodos"
+label_settings = SubResource("LabelSettings_a5fkp")
+
+[node name="TextureRect" type="TextureRect" parent="RepasoNodos/Label/CollisionShape2D" unique_id=250148073]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025140902
+anchor_top = 0.36200014
+anchor_right = 0.0251409
+anchor_bottom = 0.37500018
+offset_left = -19.632004
+offset_top = -36.268005
+offset_right = 19.367996
+offset_bottom = -0.037002563
+texture = SubResource("DPITexture_87ews")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "CollisionShape2D"
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Label" parent="RepasoNodos/Label" unique_id=558248490]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.81900007
+anchor_top = 0.16800001
+anchor_right = 0.81900007
+anchor_bottom = 0.16800001
+offset_left = 14.846954
+offset_top = 541.408
+offset_right = 596.8469
+offset_bottom = 655.408
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_87ews")
+text = "     Camera2D -> Decide que se ve
+en la pantalla"
+label_settings = SubResource("LabelSettings_a5fkp")
+
+[node name="TextureRect" type="TextureRect" parent="RepasoNodos/Label/Camera2D" unique_id=254983962]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0251409
+anchor_top = 0.36200014
+anchor_right = 0.0251409
+anchor_bottom = 0.37500018
+offset_left = -19.632004
+offset_top = -36.268005
+offset_right = 19.367996
+offset_bottom = -0.037002563
+texture = SubResource("DPITexture_nfd44")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "Camera2D"
+metadata/_edit_use_anchors_ = true
+
+[node name="NodosFisica" type="Label" parent="RepasoNodos/Label" unique_id=1121241969]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28100002
+anchor_top = 0.22800002
+anchor_right = 0.43400002
+anchor_bottom = 0.42600003
+offset_left = -592.456
+offset_top = 94.268
+offset_right = 10.615997
+offset_bottom = 541.606
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d2qvv")
+text = "Nodos de física:"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="RigidBody2D" type="Label" parent="RepasoNodos/Label/NodosFisica" unique_id=2126459317]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.89400005
+anchor_right = 0.5
+anchor_bottom = 0.89400005
+offset_left = -272.5
+offset_top = -312.99603
+offset_right = 278.5
+offset_bottom = -216.99603
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d2qvv")
+text = "     RigidBody2D -> Elemento con física
+calculada automáticamente"
+label_settings = SubResource("LabelSettings_a5fkp")
+
+[node name="TextureRect" type="TextureRect" parent="RepasoNodos/Label/NodosFisica/RigidBody2D" unique_id=819071771]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.268
+anchor_right = 0.017
+anchor_bottom = 0.268
+offset_left = -19.477001
+offset_top = -19.537994
+offset_right = 19.522999
+offset_bottom = 19.667503
+texture = SubResource("DPITexture_a5fkp")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "RigidBody2D"
+
+[node name="CharacterBody2D" type="Label" parent="RepasoNodos/Label/NodosFisica" unique_id=888597503]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.837
+anchor_right = 0.5
+anchor_bottom = 0.837
+offset_left = -285.5
+offset_top = -181.258
+offset_right = 246.5
+offset_bottom = -90.13995
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d2qvv")
+text = "      CharacterBody2D -> Personaje
+con movimiento programado"
+label_settings = SubResource("LabelSettings_a5fkp")
+
+[node name="TextureRect" type="TextureRect" parent="RepasoNodos/Label/NodosFisica/CharacterBody2D" unique_id=1862271596]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.23600002
+anchor_right = 0.034
+anchor_bottom = 0.23600002
+offset_left = -19.356
+offset_top = -19.526001
+offset_right = 19.644
+offset_bottom = 19.473999
+texture = SubResource("DPITexture_d2qvv")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "CharacterBody2D"
+
+[node name="StaticBody2D" type="Label" parent="RepasoNodos/Label/NodosFisica" unique_id=1454900223]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.85700005
+anchor_right = 0.5
+anchor_bottom = 0.878
+offset_left = -288.5
+offset_top = -81.93802
+offset_right = 338.5
+offset_bottom = -3.6539612
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d2qvv")
+text = "     StaticBody2D -> Paredes/pisos/techos"
+label_settings = SubResource("LabelSettings_a5fkp")
+
+[node name="TextureRect" type="TextureRect" parent="RepasoNodos/Label/NodosFisica/StaticBody2D" unique_id=1485303576]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.23600002
+anchor_right = 0.034
+anchor_bottom = 0.23600002
+offset_left = -24.496002
+offset_top = -16.526001
+offset_right = 14.503998
+offset_bottom = 22.473999
+texture = SubResource("DPITexture_3ujbe")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "StaticBody2D"
+
+[node name="NodosImagenes" type="Label" parent="RepasoNodos/Label" unique_id=105593395]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28100002
+anchor_top = 0.22800002
+anchor_right = 0.43400002
+anchor_bottom = 0.42600003
+offset_left = 105.544
+offset_top = 239.268
+offset_right = 708.61597
+offset_bottom = 478.606
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ujbe")
+text = "Nodos de Imágenes:"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Label" parent="RepasoNodos/Label/NodosImagenes" unique_id=309594026]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.89400005
+anchor_right = 0.5
+anchor_bottom = 0.89400005
+offset_left = -272.5
+offset_top = -148.182
+offset_right = 278.5
+offset_bottom = -52.182007
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d2qvv")
+text = "     Sprite2D"
+label_settings = SubResource("LabelSettings_a5fkp")
+
+[node name="TextureRect" type="TextureRect" parent="RepasoNodos/Label/NodosImagenes/Sprite2D" unique_id=1944592796]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.268
+anchor_right = 0.017
+anchor_bottom = 0.268
+offset_left = -19.477001
+offset_top = -19.537994
+offset_right = 19.522999
+offset_bottom = 19.667503
+texture = SubResource("DPITexture_wx88p")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "Sprite2D"
+
+[node name="AnimatedSprite2D" type="Label" parent="RepasoNodos/Label/NodosImagenes" unique_id=1565172857]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.837
+anchor_right = 0.5
+anchor_bottom = 0.837
+offset_left = -285.5
+offset_top = -54.760986
+offset_right = 246.5
+offset_bottom = 36.35704
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d2qvv")
+text = "      AnimatedSprite2D"
+label_settings = SubResource("LabelSettings_a5fkp")
+
+[node name="TextureRect" type="TextureRect" parent="RepasoNodos/Label/NodosImagenes/AnimatedSprite2D" unique_id=1564823488]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.23600002
+anchor_right = 0.034
+anchor_bottom = 0.23600002
+offset_left = -19.356
+offset_top = -19.526001
+offset_right = 19.644
+offset_bottom = 19.473999
+texture = SubResource("DPITexture_xiac7")
+stretch_mode = 4
+script = ExtResource("9_wx88p")
+icon = "AnimatedSprite2D"
+
+[node name="RepasoNodosEditor" type="MarginContainer" parent="." unique_id=1628204604]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(576, 324)
+mouse_filter = 2
+script = ExtResource("14_3ujbe")
+
+[node name="ColorRect" type="ColorRect" parent="RepasoNodosEditor" unique_id=618456453]
+layout_mode = 2
+color = Color(0, 0, 0, 0.8627451)
+
+[node name="HighlightNodeSceneTree" parent="RepasoNodosEditor" unique_id=258712285 instance=ExtResource("8_oasln")]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="RepasoNodosEditor" unique_id=266981822]
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
+
+[node name="RepasoNodosEditorContainer" type="Control" parent="RepasoNodosEditor/MarginContainer" unique_id=449549966]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="RepasoNodosEditor/MarginContainer/RepasoNodosEditorContainer" unique_id=2145652050]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 576.0
+offset_bottom = 69.0
+grow_horizontal = 2
+text = "Repaso de secciones del editor"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="SceneTree" type="Label" parent="RepasoNodosEditor/MarginContainer/RepasoNodosEditorContainer" unique_id=1483661469]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_top = 0.35200003
+anchor_right = 0.25500003
+anchor_bottom = 0.35200003
+offset_left = -172.96
+offset_top = -70.696014
+offset_right = 192.23997
+offset_bottom = 70.303986
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Árbol de escena
+o SceneTree"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="OrigenFlecha" type="Control" parent="RepasoNodosEditor/MarginContainer/RepasoNodosEditorContainer/SceneTree" unique_id=1611934442]
+layout_mode = 1
+anchor_top = 0.30900002
+anchor_right = 0.055000003
+anchor_bottom = 0.45000002
+offset_left = 1.0
+offset_top = -20.069
+offset_right = 19.88
+offset_bottom = 0.049999237
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="FileSystem" type="Label" parent="RepasoNodosEditor/MarginContainer/RepasoNodosEditorContainer" unique_id=1833745689]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -141.0
+offset_right = 484.0
+grow_vertical = 0
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Sistema de Archivos
+o FileSystem"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="OrigenFlecha" type="Control" parent="RepasoNodosEditor/MarginContainer/RepasoNodosEditorContainer/FileSystem" unique_id=1271734590]
+layout_mode = 1
+anchor_left = 0.083000004
+anchor_top = 0.716
+anchor_right = 0.083000004
+anchor_bottom = 0.716
+offset_left = -40.172
+offset_top = 0.04399872
+offset_right = -0.17200089
+offset_bottom = 40.044
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="HighlightNode" parent="RepasoNodosEditor/MarginContainer/RepasoNodosEditorContainer/FileSystem" unique_id=1866917972 instance=ExtResource("8_oasln")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+offset_top = -13.5
+offset_bottom = -13.5
+grow_horizontal = 1
+grow_vertical = 0
+color = Color(1, 1, 0, 1)
+
+[node name="Inspector" type="Label" parent="RepasoNodosEditor/MarginContainer/RepasoNodosEditorContainer" unique_id=1351524239]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = -38.25
+offset_bottom = 38.25
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_dyc6h")
+text = "Inspector"
+label_settings = ExtResource("3_iahat")
+horizontal_alignment = 1
+
+[node name="OrigenFlecha" type="Control" parent="RepasoNodosEditor/MarginContainer/RepasoNodosEditorContainer/Inspector" unique_id=1999660252]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 233.0
+offset_top = -49.25
+offset_right = 273.0
+offset_bottom = -9.25
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="HighlightNode" parent="RepasoNodosEditor/MarginContainer/RepasoNodosEditorContainer/Inspector" unique_id=148251622 instance=ExtResource("8_oasln")]
+layout_mode = 1
+color = Color(0, 0, 0.80784315, 1)
