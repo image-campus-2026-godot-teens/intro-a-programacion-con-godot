@@ -1,12 +1,6 @@
-# Resumen de Introducción a la Programación con Godot
+# Introducción a la Programación con Godot
 
-Este proyecto tiene scripts con comentarios explicando algunso conceptos básicos de programación usando Godot. Para seguir el material, conviene leer los archivos en este orden:
-
-1. `scenes/1-hola-mundo/pepita.gd` — Variables, funciones, `if`, y cómo mostrar cosas con `print`.
-2. `scenes/1-hola-mundo/pepita_con_vectores.gd` — Lo mismo pero usando `Vector2` para la posición.
-3. `scenes/2-movimiendo-top-down/pepita.gd` — Movimiento con teclado, `_physics_process`, `if`/`elif`/`else`.
-
-El ejercicio que se resuelve en estos scripts es el de **Pepita la Golondrina**. Podés ver el enunciado completo y su resolución paso a paso en [ejercicio-pepita.md](ejercicio-pepita.md).
+El código que hay en el repo es siguiendo un ejercicio que resolvimos en clase, podés ver el enunciado completo y una resolución paso a paso en [ejercicio-pepita.md](ejercicio-pepita.md).
 
 ---
 
