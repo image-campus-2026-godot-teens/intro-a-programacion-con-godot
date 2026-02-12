@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://vg35sxkhqo1p"]
 
-[ext_resource type="Script" uid="uid://de3ybi6j5wup8" path="res://scenes/3-movimiento-plataformero/pepita.gd" id="1_15tdx"]
 [ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="1_m8jkk"]
 [ext_resource type="Texture2D" uid="uid://u2nln48oh50u" path="res://assets/pepita/pepita-enyesada.png" id="1_tm6gd"]
 
@@ -27,7 +26,6 @@ size = Vector2(121.5, 117.5)
 [node name="Pepita" type="CharacterBody2D" parent="." unique_id=1436622432]
 texture_filter = 1
 position = Vector2(331, 445)
-script = ExtResource("1_15tdx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pepita" unique_id=5877517]
 scale = Vector2(3, 3)
