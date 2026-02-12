@@ -116,6 +116,32 @@ Este nodo ya viene con algunas cosas definidas:
 
 A diferencia de `_ready()` que se ejecuta una sola vez, **`_physics_process()` se ejecuta en cada frame** (muchas veces por segundo). Acá es donde ponemos la lógica de movimiento.
 
+Un detalle interesante de esta función es el valor `delta` que nos llega por parámetro. `delta` es el tiempo en segundos que pasó desde el frame anterior al actual.
+
+Siendo que _physics_process corre CADA frame, si nuestro código se viese así:
+
+```gdscript
+func _physics_process(delta):
+   position.y = position.y + 10
+```
+
+Eso significaría que en una compu en la que el juego corriese a 120 FPS, el personaje en 1 segundo se movería: 10 * 120 = 1200 píxeles.
+
+En cambio, en una compu en la que el juego corriese a 24 FPS, el personaje en 1 segundo se movería: 10 * 24 = 240 píxeles.
+
+¡Eso es una diferencia que cambia completamente nuestro juego!, todo funcionaría mucho más rápido o más lento según la potencia de nuestra computadora.
+
+Usar el valor delta arregla este problema:
+
+```gdscript
+func _physics_process(delta):
+   position.y = position.y + 10 * delta
+```
+
+Con ese código, el personaje siempre se va a mover a 10 pixeles por segundo, sin importar si el juego está corriendo a 24, 60 o 120 FPS.
+
+Lo que nos permite el valor `delta`, es que nuestro código no dependa de los frames por segundo.
+
 ### Leer el teclado con `Input`
 
 Para saber si el jugador está apretando una tecla usamos:
@@ -124,7 +150,8 @@ Para saber si el jugador está apretando una tecla usamos:
 Input.is_action_pressed("mover_abajo")
 ```
 
-Esto devuelve `true` si la tecla está presionada, o `false` si no. Las acciones como `"mover_abajo"` se configuran en Godot.
+Esto devuelve `true` si se está apretando la tecla asociada a la acción "mover_abajo", o `false` si no. Las acciones como `"mover_abajo"` se configuran en Godot yendo a:
+Proyecto > Configuración del Proyecto > Mapa de Entrada.
 
 ### `if`, `elif` y `else`
 
